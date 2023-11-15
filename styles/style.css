@@ -31,7 +31,7 @@ li {
 .wrapper {
     display: flex;
     flex-direction: column;
-    /* min-height: 100vh; */
+    min-height: 100vh;
 }
 
 main { 
@@ -80,13 +80,45 @@ h3 {
     gap: 25px;
 }
 
+.nav__item {
+    position: relative;
+}
+
 .nav__item:hover{
     color: #0f6de0;
 }
 
-.nav__item a {
+.nav__item .nav__item-name {
     font-size: 14px;
     line-height: 120%;
+    cursor: default;
+}
+
+.nav__item a {
+    font-size: 14px;
+    display: block;
+    padding: 10px 10px;
+    color: #101114;
+}
+
+.nav__item a:hover {
+    color: #0f6de0;
+    background: #f2f2f2;
+}
+
+.dropdown__wrapper {
+    padding-top: 15px;
+    position: absolute;
+}
+
+.nav__item .dropdown__menu {
+    background: #fafafa;
+    min-width: 200px;
+    display: none;
+}
+
+.nav__item:hover .dropdown__menu{
+    display: block;
 }
 
 .header__mobile-menu-button {
@@ -145,6 +177,11 @@ h3 {
 
 /* news */
 
+.news {
+    display: flex;
+    flex-direction: column;
+}
+
 .news__wrapper {
     display: grid;
     gap: 70px;
@@ -168,6 +205,30 @@ h3 {
     line-height: 100%;
 }
 
+.news__all {
+    margin-top: 30px;
+    align-self: flex-end;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #42c6ff;
+}
+
+.news__all:hover {
+    background: #63d0ff;
+}
+
+.news__all:active {
+    background: #3ac3fe;
+}
+
+.news__all a {
+    color: #fafafa;
+    font-weight: 500;
+    font-size: 14px;
+}
+
 /* карты */
 
 .map-section {
@@ -184,7 +245,7 @@ h3 {
 /* footer */
 
 #footer {
-    margin-top: auto;
+    /* margin-top: auto; */
     background: #101114;
     color: #FAFAFA;
     letter-spacing: 0.02rem;

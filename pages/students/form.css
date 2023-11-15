@@ -1,0 +1,26 @@
+.soc-docs__container {
+    margin-bottom: 20px;
+    max-width: 760px;
+}
+
+.docs-headling {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.line {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    height: 1px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.documents__block-list li {
+    padding-bottom: 10px;
+}
+
+.documents__block-list li a {
+    line-height: 120%;
+    text-decoration: underline;
+}
