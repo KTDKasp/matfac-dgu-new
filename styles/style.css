@@ -175,6 +175,12 @@ h3 {
     height: 100%;
 }
 
+/* some info */
+
+.some__info p {
+    text-align: justify;
+}
+
 /* news */
 
 .news {
@@ -197,6 +203,13 @@ h3 {
 .news__card img {
     width: 100%;
     border-radius: 5px;
+}
+
+.news__card span {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
 }
 
 .news__date {
