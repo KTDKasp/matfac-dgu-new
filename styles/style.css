@@ -74,6 +74,10 @@ h3 {
     font-weight: 700;
 }
 
+/* .menu {
+
+} */
+
 .header__nav {
     display: flex;
     align-items: center;
@@ -99,6 +103,11 @@ h3 {
     display: block;
     padding: 10px 10px;
     color: #101114;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav__item a:last-child {
+    border: none;
 }
 
 .nav__item a:hover {
@@ -109,6 +118,10 @@ h3 {
 .dropdown__wrapper {
     padding-top: 15px;
     position: absolute;
+}
+
+.nav__item:last-child .dropdown__wrapper {
+    margin-left: -76px;
 }
 
 .nav__item .dropdown__menu {
@@ -126,6 +139,7 @@ h3 {
     cursor: pointer;
     border: none;
     background: none;
+    z-index: 15;
 }
 
 /* main container */
@@ -146,7 +160,7 @@ h3 {
 /* section */
 
 .section_grey {
-    background: #f1f0f0;
+    background: #f1f0f08c;
 }
 
 /* hero */
@@ -326,11 +340,64 @@ h3 {
 
 @media (max-width: 1024px) {
     .header__nav {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
         display: none;
+        right: 0;
+        top: 0;
+        width: 300px;
+        padding: 100px 20px 20px 20px;
+        box-shadow: 0px 0px 26px #9f9f9f58;
+        z-index: 10;
+        background: #ffffff;
+    }
+
+    .nav__item {
+        display: block;
+        padding: 12px 0;
+    }
+    
+    .nav__item a {
+        font-size: 16px;
+    }
+
+    .dropdown__wrapper {
+        /* padding: 0; */
+        position: relative;
+    }
+
+    .nav__item .dropdown__menu {
+        display: block;
+    }
+
+    .nav__item .dropdown__wrapper {
+        display: none;
+    }
+
+    .nav__item.active .dropdown__wrapper {
+        display: block;
+    }
+
+    .nav__item:last-child .dropdown__wrapper {
+        margin: 0;
+    }
+
+
+    .nav__item .nav__item-name {
+        font-size: 20px;
+
     }
 
     .header__mobile-menu-button {
         display: block;
+    }
+
+    #header.open .menu{
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -342,6 +409,10 @@ h3 {
 
     .social-icons {
         justify-content: flex-start;
+    }
+
+    .news__wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
     }
 }
 

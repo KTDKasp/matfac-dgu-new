@@ -1,0 +1,66 @@
+.struct-headling {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.faculty-lead {
+    margin: 25px 0 35px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.faculty-lead__card {
+    padding: 5px 15px 25px 15px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+
+.lead-img {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.lead-img img {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+.kathedras {
+    margin: 25px 0;
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+}
+
+.kathedras a {
+    background: #333333;
+    color: #ffffff;
+    border-radius: 5px;
+    min-height: 85px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 15px;
+}
+
+@media (max-width: 500px) {
+    .kathedras {
+        grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
+    }
+
+    .kathedras a {
+        min-height: 100px;
+    }
+}
