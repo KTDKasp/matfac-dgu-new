@@ -36,7 +36,7 @@
 }
 
 .kathedras {
-    margin: 25px 0;
+    margin: 25px 0 35px 0;
     display: grid;
     gap: 25px;
     grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
@@ -53,6 +53,33 @@
     align-items: center;
     text-align: center;
     padding: 0 15px;
+}
+
+.faculty-council__list {
+    margin: 25px 0 35px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.faculty-council__list li {
+    border-radius: 5px;
+    width: calc(50% - 12px);
+    padding: 15px 20px;
+    background: #f9f9f9;
+}
+
+@media (max-width: 765px) {
+    .faculty-council__list {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .faculty-council__list li {
+        width: 100%;
+    }
 }
 
 @media (max-width: 500px) {
