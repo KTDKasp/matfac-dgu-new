@@ -214,10 +214,23 @@ h3 {
     gap: 20px;
 }
 
-.news__card img {
+.card__img {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card__img img {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+/* .news__card img {
     width: 100%;
     border-radius: 5px;
-}
+} */
 
 .news__card span {
     display: -webkit-box;
